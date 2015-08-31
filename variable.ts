@@ -53,7 +53,7 @@ class Variable {
 	}
 };
 
-function constVariable(name, val) {
+function constVariable(name, val): Variable {
 	return new Variable(
 		name,
 		function() {return val},
@@ -61,7 +61,7 @@ function constVariable(name, val) {
 	)
 }
 
-function add(name, a, b) {
+function add(name, a, b): Variable {
 	return new Variable(
 		name,
 		function() {return a.val + b.val},
